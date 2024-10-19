@@ -1,0 +1,72 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Platform Availability</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <style>
+        /* Add touch and hover effects for interactivity */
+        a.card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        a.card:hover {
+            transform: translateY(-5px); /* Slight lift on hover */
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5); /* Shadow effect */
+        }
+
+        a.card:active {
+            transform: scale(0.98);
+            transition: transform 0.1s ease;
+        }
+
+        /* Custom styles for the background and text */
+        body {
+            background: radial-gradient(circle at top left, rgba(0, 0, 0, 0.85), rgba(15, 15, 15, 0.85));
+        }
+
+        .icon {
+            color: #4BDAF7; /* Soft blue color for icons */
+        }
+    </style>
+</head>
+<body class="text-gray-300 flex items-center justify-center min-h-screen">
+    <div class="space-y-6">
+
+        <!-- Windows Card -->
+        <a href="https://example.com/windows" class="card bg-gray-900 p-6 rounded-lg flex items-center space-x-4 shadow-lg">
+            <div class="text-5xl icon">
+                <i class="fab fa-windows"></i>
+            </div>
+            <div>
+                <h2 class="text-xl font-semibold text-gray-100">Windows</h2>
+                <p>The Windows version is not available yet.</p>
+            </div>
+        </a>
+
+        <!-- Android Card -->
+        <a href="https://example.com/android" class="card bg-gray-900 p-6 rounded-lg flex items-center space-x-4 shadow-lg">
+            <div class="text-5xl icon">
+                <i class="fab fa-android"></i>
+            </div>
+            <div>
+                <h2 class="text-xl font-semibold text-gray-100">Android</h2>
+                <p>Compatible with Android 6+ (armeabi-v7a / arm64-v8a)</p>
+            </div>
+        </a>
+
+        <!-- iOS/macOS Card -->
+        <a href="https://example.com/ios" class="card bg-gray-900 p-6 rounded-lg flex items-center space-x-4 shadow-lg">
+            <div class="text-5xl icon">
+                <i class="fab fa-apple"></i>
+            </div>
+            <div>
+                <h2 class="text-xl font-semibold text-gray-100">iOS/macOS</h2>
+                <p>Ultra GO is not available on macOS or iOS. We don't plan on supporting these platforms in the future.</p>
+            </div>
+        </a>
+
+    </div>
+</body>
+</html>
