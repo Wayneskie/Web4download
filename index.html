@@ -2,68 +2,99 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Platform Availability</title>
+    <title>Download Meta Go</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <style>
-        /* Add touch and hover effects for interactivity */
-        a.card {
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
-
-        a.card:hover {
-            transform: translateY(-5px); /* Slight lift on hover */
-            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5); /* Shadow effect */
-        }
-
-        a.card:active {
-            transform: scale(0.98);
-            transition: transform 0.1s ease;
-        }
-
-        /* Custom styles for the background and text */
+        /* Background image settings */
         body {
-            background: radial-gradient(circle at top left, rgba(0, 0, 0, 0.85), rgba(15, 15, 15, 0.85));
+            background: url('https://i.imghippo.com/files/CaJ2P1729270791.jpg') no-repeat center center fixed; /* Set background image */
+            background-size: cover; /* Cover the entire screen */
+            overflow: hidden; /* Prevent scrolling */
+        }
+
+        /* Blur effect on background */
+        .background-blur {
+            position: fixed; /* Fixes the blur in the background */
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: inherit; /* Inherit the background image */
+            filter: blur(8px); /* Apply blur */
+            z-index: 0; /* Set z-index to be behind content */
+        }
+
+        /* Container for the content */
+        .content {
+            position: relative; /* Positioning context for absolute children */
+            z-index: 10; /* Bring content in front of the background */
+            backdrop-filter: blur(5px); /* Optional: apply additional blur effect to the backdrop */
+            padding: 20px; /* Padding for content area */
+            border-radius: 10px; /* Rounded corners for aesthetic */
+        }
+
+        /* Text color for improved readability */
+        h2, p {
+            color: rgba(255, 255, 255, 0.9); /* White text with slight transparency */
         }
 
         .icon {
             color: #4BDAF7; /* Soft blue color for icons */
         }
+
+        /* Button style */
+        a.card {
+            transition: transform 0.2s ease; /* Smooth transition for transform */
+        }
+
+        /* Hover effect */
+        a.card:hover {
+            transform: translateY(-5px); /* Lift on hover */
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5); /* Shadow effect */
+        }
+
+        /* Active effect */
+        a.card:active {
+            transform: scale(0.95); /* Scale down when tapped */
+            transition: transform 0.1s ease; /* Quick transition for active effect */
+        }
     </style>
 </head>
 <body class="text-gray-300 flex items-center justify-center min-h-screen">
-    <div class="space-y-6">
+    <div class="background-blur"></div> <!-- Background blur layer -->
+    <div class="content space-y-6">
 
         <!-- Windows Card -->
-        <a href="https://example.com/windows" class="card bg-gray-900 p-6 rounded-lg flex items-center space-x-4 shadow-lg">
+        <a href="https://download-metago.vercel.app/" class="card bg-gray-900 p-6 rounded-lg flex items-center space-x-4 shadow-lg">
             <div class="text-5xl icon">
                 <i class="fab fa-windows"></i>
             </div>
             <div>
-                <h2 class="text-xl font-semibold text-gray-100">Windows</h2>
+                <h2 class="text-xl font-semibold">Windows</h2>
                 <p>The Windows version is not available yet.</p>
             </div>
         </a>
 
         <!-- Android Card -->
-        <a href="https://example.com/android" class="card bg-gray-900 p-6 rounded-lg flex items-center space-x-4 shadow-lg">
+        <a href="https://download-metago.vercel.app/" class="card bg-gray-900 p-6 rounded-lg flex items-center space-x-4 shadow-lg">
             <div class="text-5xl icon">
                 <i class="fab fa-android"></i>
             </div>
             <div>
-                <h2 class="text-xl font-semibold text-gray-100">Android</h2>
-                <p>Compatible with Android 6+ (armeabi-v7a / arm64-v8a)</p>
+                <h2 class="text-xl font-semibold">Android</h2>
+                <p>Support Android 6+ (Android 10+) Its not release yet</p>
             </div>
         </a>
 
         <!-- iOS/macOS Card -->
-        <a href="https://example.com/ios" class="card bg-gray-900 p-6 rounded-lg flex items-center space-x-4 shadow-lg">
+        <a href="https://download-metago.vercel.app/" class="card bg-gray-900 p-6 rounded-lg flex items-center space-x-4 shadow-lg">
             <div class="text-5xl icon">
                 <i class="fab fa-apple"></i>
             </div>
             <div>
-                <h2 class="text-xl font-semibold text-gray-100">iOS/macOS</h2>
-                <p>Ultra GO is not available on macOS or iOS. We don't plan on supporting these platforms in the future.</p>
+                <h2 class="text-xl font-semibold">iOS/macOS</h2>
+                <p>Meta Go is not available on macOS or iOS. We don't plan on supporting these platforms in the future.</p>
             </div>
         </a>
 
